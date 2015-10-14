@@ -7,7 +7,7 @@ Avoid ImageLoader could not load from `https://graph.facebook.com/{uid}/picture`
 Use
 
 ```
-content://facebook.content.ContentProvider/{uid}/picture
+FacebookContentProvider.getPictureStringFromUid(uid);
 ```
 
 instead

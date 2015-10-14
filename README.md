@@ -18,6 +18,8 @@ instead
 
 For examples:
 
+AUIL:
+
 ```java
 ImageLoader.getInstance().displayImage(FacebookContentProvider.getPictureStringFromUid(uid), mImageView);
 ```

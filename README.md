@@ -1,5 +1,7 @@
 # FacebookContentProvider
 
+![](art/facebook-content-provider.png)
+
 Avoid ImageLoader could not load from `https://graph.facebook.com/{uid}/picture`. Use android `content://` scheme instead, it's look like the following uri: `content://facebook.content.ContentProvider/{uid}/picture`.
 
 ## Usage

@@ -26,6 +26,7 @@ import android.provider.OpenableColumns;
 import android.util.Log;
 import retrofit.*;
 import retrofit.http.*;
+import proguard.annotation.*;
 
 public class FacebookContentProvider extends NetworkPipeContentProvider {
     public static final String AUTHORITY = "facebook.content.FacebookContentProvider";
@@ -84,14 +85,20 @@ public class FacebookContentProvider extends NetworkPipeContentProvider {
         Picture picture(@Path("uid") String uid);
     }
 
+    @Keep
+    @KeepClassMembers
     static class User {
         Picture picture;
     }
 
+    @Keep
+    @KeepClassMembers
     static class Picture {
         Data data;
     }
 
+    @Keep
+    @KeepClassMembers
     static class Data {
         // "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p50x50/1234567"
         String url;

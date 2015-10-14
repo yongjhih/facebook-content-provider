@@ -1,6 +1,20 @@
 # FacebookContentProvider
 
-Avoid ImageLoader could not load from "https://graph.facebook.com/{uid}/picture". Use android `content://` scheme instead, it's look like the following uri: `content://facebook.content.ContentProvider/picture/{uid}`.
+Avoid ImageLoader could not load from `https://graph.facebook.com/{uid}/picture`. Use android `content://` scheme instead, it's look like the following uri: `content://facebook.content.ContentProvider/{uid}/picture`.
+
+## Usage
+
+Use
+
+```
+content://facebook.content.ContentProvider/{uid}/picture
+```
+
+instead
+
+```
+https://graph.facebook.com/{uid}/picture
+```
 
 ## Installation
 

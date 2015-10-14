@@ -47,8 +47,8 @@ dependencies {
 
     compile project(':facebook-content-provider')
 
-    compile 'io.reactivex:rxjava:1.0.7'
-    compile 'io.reactivex:rxandroid:0.24.0'
+    //compile 'io.reactivex:rxjava:1.0.7'
+    //compile 'io.reactivex:rxandroid:0.24.0'
     compile 'com.facebook.android:facebook-android-sdk:3.20.0'
 
     compile 'com.jakewharton:butterknife:6.1.0'

@@ -1,4 +1,4 @@
-package rx.facebook.app;
+package facebook.content.app;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

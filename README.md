@@ -10,6 +10,7 @@ Use
 
 ```java
 FacebookContentProvider.getPictureStringFromUid(uid);
+// content://facebook.content.FacebookContentProvider/{uid}/picture
 ```
 
 instead

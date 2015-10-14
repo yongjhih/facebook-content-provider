@@ -6,14 +6,14 @@ Avoid ImageLoader could not load from `https://graph.facebook.com/{uid}/picture`
 
 Use
 
-```
+```java
 FacebookContentProvider.getPictureStringFromUid(uid);
 ```
 
 instead
 
-```
-https://graph.facebook.com/{uid}/picture
+```java
+"https://graph.facebook.com/{uid}/picture"
 ```
 
 ## Installation

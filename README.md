@@ -9,7 +9,7 @@ Avoid ImageLoader could not load from `https://graph.facebook.com/{uid}/picture`
 Use
 
 ```java
-FacebookContentProvider.getPictureStringFromUid(uid);
+FacebookContentProvider.getPictureUrl(uid);
 // content://facebook.content.FacebookContentProvider/{uid}/picture
 ```
 
@@ -24,25 +24,25 @@ For examples:
 AUIL:
 
 ```java
-ImageLoader.getInstance().displayImage(FacebookContentProvider.getPictureStringFromUid(uid), mImageView);
+ImageLoader.getInstance().displayImage(FacebookContentProvider.getPictureUrl(uid), mImageView);
 ```
 
 Picasso:
 
 ```java
-Picasso.with(context).load(FacebookContentProvider.getPictureStringFromUid(uid)).into(mImageView);
+Picasso.with(context).load(FacebookContentProvider.getPictureUrl(uid)).into(mImageView);
 ```
 
 Glide:
 
 ```java
-Glide.with(context).load(FacebookContentProvider.getPictureStringFromUid(uid)).into(mImageView);
+Glide.with(context).load(FacebookContentProvider.getPictureUrl(uid)).into(mImageView);
 ```
 
 Fresco:
 
 ```java
-mImageView.setImageURI(FacebookContentProvider.getPictureUriFromUid(uid)));
+mImageView.setImageURI(FacebookContentProvider.getPictureUri(uid)));
 ```
 
 ## Installation

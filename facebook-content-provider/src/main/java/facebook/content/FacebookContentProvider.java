@@ -69,12 +69,12 @@ public class FacebookContentProvider extends NetworkPipeContentProvider {
 
     }
 
-    public static Uri getPictureUriFromUid(String uid) {
+    public static Uri getPictureUri(String uid) {
         return CONTENT_URI.buildUpon().appendPath(uid).appendPath("picture").build();
     }
 
-    public static String getPictureStringFromUid(String uid) {
-        return getPictureUriFromUid(uid).toString();
+    public static String getPictureUrl(String uid) {
+        return getPictureUri(uid).toString();
     }
 
     interface Facebook {

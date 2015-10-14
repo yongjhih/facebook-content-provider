@@ -16,6 +16,30 @@ instead
 "https://graph.facebook.com/{uid}/picture"
 ```
 
+For examples:
+
+```java
+ImageLoader.getInstance().displayImage(FacebookContentProvider.getPictureStringFromUid(uid), mImageView);
+```
+
+Picasso:
+
+```java
+Picasso.with(context).load(FacebookContentProvider.getPictureStringFromUid(uid)).into(mImageView);
+```
+
+Glide:
+
+```java
+Glide.with(context).load(FacebookContentProvider.getPictureStringFromUid(uid)).into(mImageView);
+```
+
+Fresco:
+
+```java
+mImageView.setImageURI(FacebookContentProvider.getPictureUriFromUid(uid)));
+```
+
 ## Installation
 
 AndroidManifest.xml:

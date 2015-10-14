@@ -1,0 +1,2 @@
+include ':facebook-content-provider'
+include ':facebook-content-provider-app'

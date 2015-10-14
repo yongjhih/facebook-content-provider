@@ -56,10 +56,11 @@ public class FacebookContentProvider extends NetworkPipeContentProvider {
 
         String url = null;
         try {
-            url = facebook.picture(uid).picture.data.url;
+            url = facebook.picture(uid).data.url;
         } catch (Exception e) {
             e.printStackTrace();
-            url = "https://graph.facebook.com/" + uid + "/picture?width=400&height=400";
+            //url = "https://graph.facebook.com/" + uid + "/picture?width=400&height=400";
+            url = "https://graph.facebook.com/" + uid + "/picture?width=400&height=400&redirect=1";
         }
 
         android.util.Log.d(TAG, "url: " + url);
@@ -76,19 +77,23 @@ public class FacebookContentProvider extends NetworkPipeContentProvider {
     }
 
     interface Facebook {
-        //@GET("/{uid}/picture?width=400&height=400")
-        @GET("/{uid}?fields=picture")
-        User picture(@Path("uid") String uid);
+        //@GET("/{uid}?fields=picture")
+        //User picture(@Path("uid") String uid);
+
+        @GET("/{uid}/picture?width=400&height=400&redirect=0")
+        Picture picture(@Path("uid") String uid);
     }
 
     static class User {
         Picture picture;
-        static class Picture {
-            Data data;
-            static class Data {
-                // "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p50x50/1234567"
-                String url;
-            }
-        }
+    }
+
+    static class Picture {
+        Data data;
+    }
+
+    static class Data {
+        // "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xpf1/v/t1.0-1/p50x50/1234567"
+        String url;
     }
 }

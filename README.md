@@ -2,6 +2,26 @@
 
 Avoid ImageLoader could not load from "https://graph.facebook.com/{uid}/picture". Use android `content://` scheme instead, it's look like the following uri: `content://facebook.content.ContentProvider/picture/{uid}`.
 
+## Installation
+
+AndroidManifest.xml:
+
+```xml
+<provider android:name="facebook.content.FacebookContentProvider"
+  android:authorities="facebook.content.FacebookContentProvider" />
+```
+
+build.gradle:
+
+```gradle
+repositories {
+  maven { url "https://jitpack.io" }
+}
+dependencies {
+  compile 'com.github.yongjhih:facebook-content-provider:-SNAPSHOT'
+}
+```
+
 ## TODO
 
 * Test Android Universal Image Loader(AUIL)

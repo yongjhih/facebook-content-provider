@@ -73,6 +73,7 @@ dependencies {
 * Test Picasso
 * Allow json parsing callback: `getPictureUrl(json -> parsePictureUrl(json));`
 * Allow raw parsing callback: `getPictureUrl(uri -> parsePictureUrlByUid(uri.getPathSegments().get(0)));`
+* Allow raw parsing Observable callback: `getPictureUrl(uri -> Observable.just(parsePictureUrlByUid(uri.getPathSegments().get(0))));`
 
 ### Support annotations for content provider (Move to ContentProviderAnnotations project)
 
@@ -81,10 +82,25 @@ ContentProviderAnnotations allow uri selection be easier.
 ```java
 class FacebookContentProvider extends AnnotatedContentProvider {
   @File("/{uid}/picture")
-  public ParcelFileDescriptor picture(@Path("uid") uid, String mode) {
+  public ParcelFileDescriptor openPictureFileDescriptor(@Path("uid") uid, String mode) {
+    // ..
+  }
+
+  @File("/{uid}/picture") // duplicated uri
+  public InputStream openPictureInputStream(@Path("uid") uid, String mode) {
     // ..
   }
   
+  @File("/{uid}/picture") // duplicated uri
+  public String openPictureUrl(@Path("uid") uid, String mode) {
+    // ..
+  }
+
+  @File("/{uid}/picture") // duplicated uri
+  public Observable<String> openPictureUrlObs(@Path("uid") uid, String mode) {
+    // ..
+  }
+
   @Query("/{uid}")
   public cursor user(@Path("uid") uid, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
     // ..

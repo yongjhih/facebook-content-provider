@@ -71,6 +71,41 @@ dependencies {
 * Test Fresco
 * Test Glide
 * Test Picasso
+* Allow json parsing callback: `getPictureUrl(json -> parsePictureUrl(json));`
+* Allow raw parsing callback: `getPictureUrl(uri -> parsePictureUrlByUid(uri.getPathSegments().get(0)));`
+
+### Support annotations for content provider (Move to ContentProviderAnnotations project)
+
+ContentProviderAnnotations allow uri selection be easier.
+
+```java
+class FacebookContentProvider extends AnnotatedContentProvider {
+  @File("/{uid}/picture")
+  public ParcelFileDescriptor picture(@Path("uid") uid, String mode) {
+    // ..
+  }
+  
+  @Query("/{uid}")
+  public cursor user(@Path("uid") uid, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+    // ..
+  }
+  
+  @Insert("/user")
+  public Uri createUser(ContentValues initialValues) {
+    // ..
+  }
+
+  @Update("/user")
+  public int updateUser(ContentValues values, String where, String[] whereArgs) {
+    / ..
+  }
+
+  @Delete("/{uid}")
+  public int deleteUser(@Path("uid") uid, String where, String[] whereArgs) {
+    // ..
+  }
+}
+```
 
 ## LICENSE
 

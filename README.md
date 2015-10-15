@@ -95,8 +95,8 @@ class FacebookContentProvider extends AnnotatedContentProvider {
     // ..
   }
 
-  @Update("/user")
-  public int updateUser(ContentValues values, String where, String[] whereArgs) {
+  @Update("/{uid}")
+  public int updateUser(@Path("uid") uid, ContentValues values, String where, String[] whereArgs) {
     / ..
   }
 

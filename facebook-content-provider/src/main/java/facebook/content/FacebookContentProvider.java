@@ -30,7 +30,7 @@ import proguard.annotation.*;
 
 public class FacebookContentProvider extends NetworkPipeContentProvider {
     public static final String AUTHORITY = "facebook.content.FacebookContentProvider";
-    public static final String TAG = AUTHORITY;
+    public static final String TAG = "FacebookContentProvider";
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/");
 
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);

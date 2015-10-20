@@ -58,8 +58,22 @@ build.gradle:
 
 ```gradle
 repositories {
+  jcenter()
+}
+
+dependencies {
+  compile 'com.infstory:facebook-content-provider:1.0.0'
+}
+```
+
+or jitpack:
+
+```gradle
+repositories {
+  jcenter()
   maven { url "https://jitpack.io" }
 }
+
 dependencies {
   compile 'com.github.yongjhih:facebook-content-provider:-SNAPSHOT'
 }

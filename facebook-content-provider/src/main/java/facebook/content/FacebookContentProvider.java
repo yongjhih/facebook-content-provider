@@ -43,10 +43,11 @@ public class FacebookContentProvider extends NetworkPipeContentProvider {
 
     @Override
     public boolean onCreate() {
-        RestAdapter restAdapter = new RestAdapter.Builder()
-            .setEndpoint("https://graph.facebook.com")
-            .build();
-        facebook = restAdapter.create(Facebook.class);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://graph.facebook.com")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        facebook = retrofit.create(Facebook.class);
         return true;
     }
 

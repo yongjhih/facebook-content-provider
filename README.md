@@ -3,9 +3,9 @@
 [![JitPack](https://img.shields.io/github/tag/yongjhih/facebook-content-provider.svg?label=JitPack)](https://jitpack.io/#yongjhih/facebook-content-provider)
 [![javadoc](https://img.shields.io/github/tag/yongjhih/facebook-content-provider.svg?label=javadoc)](https://jitpack.io/com/github/yongjhih/facebook-content-provider/-SNAPSHOT/javadoc/)
 [![Build Status](https://travis-ci.org/yongjhih/facebook-content-provider.svg)](https://travis-ci.org/yongjhih/facebook-content-provider)
-[![Gitter Chat](https://img.shields.io/gitter/room/yongjhih/facebook-content-provider.svg)](https://gitter.im/yongjhih/facebook-content-provider)
 [![Coverage Status](https://coveralls.io/repos/github/yongjhih/facebook-content-provider/badge.svg)](https://coveralls.io/github/yongjhih/facebook-content-provider)
 <!--[![Codacy Badge](https://api.codacy.com/project/badge/Grade/05a9b9b101b24073bc021f41bafc5090)](https://codacy.com/app/yongjhih/facebook-content-provider)-->
+<!--[![Gitter Chat](https://img.shields.io/gitter/room/yongjhih/facebook-content-provider.svg)](https://gitter.im/yongjhih/facebook-content-provider)-->
 
 ![](art/facebook-content-provider.png)
 
